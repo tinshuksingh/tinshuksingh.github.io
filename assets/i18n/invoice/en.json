@@ -1,0 +1,70 @@
+{
+  "cr.invoice.menu.pending-approvals": "Pending Approvals",
+  "cr.invoice.menu.view-invoice": "My Requests",
+  "cr.invoice.menu.add-invoice": "Add New Invoice",
+  "cr.invoice.menu.approve-request": "Approve Requests",
+  "cr.invoice.menu.todos": "Todos",
+  "cr.invoice.menu.stocks": "Stocks",
+  "cr.invoice.menu.theming": "Theming",
+  "cr.invoice.menu.auth": "Auth",
+  "cr.invoice.todos.input": "I am going to...",
+  "cr.invoice.todos.tooltip.add": "Add new todo",
+  "cr.invoice.todos.tooltip.remove": "Remove done todos",
+  "cr.invoice.todos.list": "Todo list",
+  "cr.invoice.todos.example": "Todo example",
+  "cr.invoice.todos.text1": "This is a classic",
+  "cr.invoice.todos.text2": "todo",
+  "cr.invoice.todos.text3":
+    "example with support for adding, toggling, removing and filtering of the todo items.",
+  "cr.invoice.todos.text4": "State handling is implemented using",
+  "cr.invoice.todos.text5":
+    "module and support for lazy loaded reducers (this is a lazy loaded feature module).",
+  "cr.invoice.todos.text6":
+    "Todos are persisted into local storage so you should see your todos also on later visits when using the same browser.",
+  "cr.invoice.todos.filter.all": "All",
+  "cr.invoice.todos.filter.done": "Done",
+  "cr.invoice.todos.filter.active": "Active",
+  "cr.invoice.todos.filter.description": "Displaying",
+  "cr.invoice.todos.filter.items": "todos",
+  "cr.invoice.todos.filter.item": "todo",
+  "cr.invoice.stocks.title": "Stock market",
+  "cr.invoice.stocks.symbol": "Stock symbol",
+  "cr.invoice.stocks.description":
+    "Please provide some valid stock market symbol like:",
+  "cr.invoice.stocks.text1": "Stock market example shows how to implement",
+  "cr.invoice.stocks.text2": "requests using",
+  "cr.invoice.stocks.text3": "module.",
+  "cr.invoice.stocks.text4":
+    "Updating symbol query with different symbol will emit action which updates state with loading flag (reducer) and triggers effect for retrieving of selected stock.",
+  "cr.invoice.stocks.text5":
+    "Actions are debounced and every subsequent request will cancel previous one using",
+  "cr.invoice.stocks.text6":
+    "Success or error actions are emitted on request completion. Loading spinner is removed and stock info or error message is displayed.",
+  "cr.invoice.stocks.error1": "Stock",
+  "cr.invoice.stocks.error2": "not found",
+  "cr.invoice.theming.parent.title": "Theme scoping with nested components",
+  "cr.invoice.theming.parent.description": "parent works!",
+  "cr.invoice.theming.parent.text1":
+    "Theme styles are not imported in component's",
+  "cr.invoice.theming.parent.text2": "property of",
+  "cr.invoice.theming.parent.text3": "decorator but in the main",
+  "cr.invoice.theming.parent.text4":
+    "file. Because of this, theme styles are",
+  "cr.invoice.theming.parent.text5": "NOT",
+  "cr.invoice.theming.parent.text6":
+    "scoped to the component automatically.",
+  "cr.invoice.theming.parent.text7": "We have to use",
+  "cr.invoice.theming.parent.text8": "specific",
+  "cr.invoice.theming.parent.text9":
+    "selectors to prevent styles from leaking into child components. This can be achieved by using",
+  "cr.invoice.theming.parent.text10":
+    "in css rules to enhance their specificity. For example checkout theme file of this component:",
+  "cr.invoice.theming.child.title": "childs h1",
+  "cr.invoice.theming.child.subtitle": "should be without style",
+  "cr.invoice.theming.child.description": "child works!",
+  "cr.invoice.auth.title": "Authenticated component",
+  "cr.invoice.auth.description1":
+    "This component is only accessible for authenticated users",
+  "cr.invoice.auth.description2":
+    "Logging out will cause user to be redirected to home screen if visiting route accessible only to authenticated users"
+}

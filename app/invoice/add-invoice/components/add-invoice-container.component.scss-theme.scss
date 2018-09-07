@@ -1,0 +1,5 @@
+@import '~@angular/material/theming';
+
+@mixin cr-add-invoice-container-component-theme($theme) {
+  $accent: map-get($theme, accent);
+}

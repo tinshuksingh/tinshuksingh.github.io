@@ -1,0 +1,98 @@
+<mat-horizontal-stepper linear #stepper>
+  <mat-step [stepControl]="projectDetailsFormGroup">
+    <form [formGroup]="projectDetailsFormGroup" *ngFor="let project of projectDetails">
+      <ng-template matStepLabel>Project Details</ng-template>
+      <mat-form-field>
+        <input matInput placeholder="Team Name" [value]="project.teamName" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Reporting Manager Name" [value]="project.managerName" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-select placeholder="Shift" formControlName="shift" required>
+          <mat-option>--</mat-option>
+          <mat-option *ngFor="let shift of shiftDetails" [value]="shift">
+            {{shift.shiftName}}
+          </mat-option>
+        </mat-select>
+        <!-- <mat-error *ngIf="shift.hasError('required')">Please choose a shift</mat-error> -->
+      </mat-form-field>
+
+      <div>
+        <button mat-button [disabled]="!projectDetailsFormGroup.valid" matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+
+  <mat-step [stepControl]="rideDetailsFormGroup">
+    <form [formGroup]="rideDetailsFormGroup">
+      <ng-template matStepLabel>Ride Details</ng-template>
+      
+      <mat-form-field>
+        <input matInput [matDatepicker]="picker" placeholder="Choose a ride date" formControlName="rideDate" required>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      
+      <mat-form-field>
+        <mat-select placeholder="Invoice Type" formControlName="invoiceType" required>
+          <mat-option>--</mat-option>
+          <mat-option *ngFor="let invoiceType of invoiceTypes" [value]="invoiceType">
+            {{invoiceType.name}}
+          </mat-option>
+        </mat-select>
+        <!-- <mat-error *ngIf="invoiceType.hasError('required')">Please choose a invoice type</mat-error> -->
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-select placeholder="CAB Service" formControlName="cabService" required>
+          <mat-option>--</mat-option>
+          <mat-option *ngFor="let cabService of cabServices" [value]="cabService">
+            {{cabService.name}}
+          </mat-option>
+        </mat-select>
+        <!-- <mat-error *ngIf="cabService.hasError('required')">Please choose a cab service</mat-error> -->
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Enter Ride Number" formControlName="rideNumber" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <textarea matInput placeholder="Leave a comment" formControlName="rideComment"></textarea>
+      </mat-form-field>
+
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button [disabled]="!rideDetailsFormGroup.valid" matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+
+  <mat-step [stepControl]="invoiceFormGroup">
+    <form [formGroup]="invoiceFormGroup">
+      <ng-template matStepLabel>Invoice</ng-template>
+      <button mat-raised-button color="warn" (click)="openfileDialog()">
+        <mat-icon>file_upload</mat-icon>
+        Select Invoice To Upload
+      </button>
+      <input type="file" id="invoiceUpload" name="invoiceUpload" formControlName="invoiceUpload" (change)="onFileChange($event)" style="display:none;" />
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button [disabled]="!invoiceFormGroup.valid" matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+
+  <mat-step>
+    <ng-template matStepLabel>Review</ng-template>
+    You are now done.
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button (click)="stepper.reset()">Reset</button>
+    </div>
+  </mat-step>
+
+</mat-horizontal-stepper>

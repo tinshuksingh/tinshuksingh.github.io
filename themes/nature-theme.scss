@@ -1,0 +1,9 @@
+$cr-nature-primary: mat-palette($mat-brown, 700, 300, 900);
+$cr-nature-accent: mat-palette($mat-deep-purple, 300);
+$cr-nature-warn: mat-palette($mat-red, 600);
+
+$cr-nature-theme: mat-light-theme(
+  $cr-nature-primary,
+  $cr-nature-accent,
+  $cr-nature-warn
+);

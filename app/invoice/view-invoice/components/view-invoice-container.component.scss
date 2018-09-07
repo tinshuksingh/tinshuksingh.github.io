@@ -1,0 +1,16 @@
+@import '../../../../styles-variables';
+
+.mat-invoice-table {
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 12px;
+
+    table {
+        width: 100%;
+    }
+    .mat-form-field {
+        font-size: 14px;
+        width: 100%;
+    }
+}
+

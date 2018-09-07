@@ -1,0 +1,5 @@
+$cr-primary: mat-palette($mat-indigo, 800, 300, 900);
+$cr-accent: mat-palette($mat-light-blue);
+$cr-warn: mat-palette($mat-pink, 600);
+
+$cr-theme: mat-light-theme($cr-primary, $cr-accent, $cr-warn);
